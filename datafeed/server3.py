@@ -72,7 +72,7 @@ def market(t0=MARKET_OPEN):
     """ Generates a random series of market conditions,
         (time, price, spread).
     """
-    for hours, px, spd in zip(bwalk(*FREQ), bwalk(*PX), bwalk(*SPD)):
+    for hours, px, spd in zip(bwalk(*FREQ), bwalk(*PX), bwalk(*SPD)):   
         yield t0, px, spd
         t0 += timedelta(hours=abs(hours))
 
