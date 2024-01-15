@@ -49,11 +49,11 @@ class Graph extends Component<IProps, {}> {
 
       // Add more Perspective configurations here.
       elem.load(this.table);
-      elem.setAttribute('view', 'y_line')
-      elem.setAttribute('column-pivots', '["stock"]')
-      elem.setAttribute('row-pivots', '["timestamp"]')
-      elem.setAttribute('columns', '["top_ask_price"]')
-      elem.setAttribute('aggregates', '{"stock":"distinct count", "top_ask_price":"avg", "timestamp":"distinct count"}')  //
+      elem.setAttribute('view', 'y_line')               //Sets table type to a line graph
+      elem.setAttribute('column-pivots', '["stock"]')   //Separates types of stock lines
+      elem.setAttribute('row-pivots', '["timestamp"]')  //Frequency of graph updates ( X Co-ordinate )
+      elem.setAttribute('columns', '["top_ask_price"]') //Line value assignment ( Y Co-ordinate )
+      elem.setAttribute('aggregates', '{"stock":"distinct count", "top_ask_price":"avg", "timestamp":"distinct count"}')  //CSS for table values
     }
   }
 
